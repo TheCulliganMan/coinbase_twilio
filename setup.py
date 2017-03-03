@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(name='etherwatch',
       packages=['etherwatch'],
-      version='0.1.4',
+      version='0.1.6',
       description='Notifies you about ether prices.',
       author = 'Ryan Culligan',
       author_email='rrculligan@gmail.com',

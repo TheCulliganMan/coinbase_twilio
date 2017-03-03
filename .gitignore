@@ -53,3 +53,7 @@ docs/_build/
 *.db
 etherwatch/positions.py
 etherwatch/api_keys.py
+
+etherwatch/config/api_keys.py
+
+etherwatch/config/positions.py

@@ -14,5 +14,6 @@ TWILIO_KEYS = {
 SLACK_KEYS = {
     'api_key':'<insert_here>',
     'api_secret':'<insert_here>',
-    'test-token':'<insert_here>'
+    'test-token':'<insert_here>',
+    'webhook':'<insert_here>'
 }

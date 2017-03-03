@@ -1,11 +1,15 @@
 # /usr/bin/env python
 import time
 import locale
+import json
 
-from etherwatch.api_keys import TWILIO_KEYS
-from etherwatch.api_keys import SLACK_KEYS
-from etherwatch.positions import POSITIONS
+import requests
 from slackclient import SlackClient
+
+from etherwatch.config.api_keys import TWILIO_KEYS
+from etherwatch.config.api_keys import SLACK_KEYS
+from etherwatch.config.positions import POSITIONS
+
 
 locale.setlocale( locale.LC_ALL, '' )
 
@@ -49,7 +53,7 @@ class MessagingFunctions:
             time.sleep(1)
 
     @staticmethod
-    def slack_notify(person_str, message, channel='#positions'):
+    def slack_token_api(person_str, message, channel='#positions'):
         client = MessagingFunctions.get_slack_client()
         client.api_call(
           "chat.postMessage",
@@ -58,8 +62,23 @@ class MessagingFunctions:
         )
 
     @staticmethod
+    def slack_webhook(person_str, message, webhook):
+        slack_data = {'text':message}
+        response = requests.post(
+            webhook,
+            data=json.dumps(slack_data),
+            headers={'Content-Type': 'application/json'}
+        )
+
+    @staticmethod
     def notify(person_str, message, slack=True, sms=False):
+
         if slack:
-            MessagingFunctions.slack_notify(person_str, message)
+            MessagingFunctions.slack_webhook(
+                person_str,
+                message,
+                SLACK_KEYS['webhook']
+            )
+
         if sms:
             MessagingFunctions.ms_notify(person_str, message)
