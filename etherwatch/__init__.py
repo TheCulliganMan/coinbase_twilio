@@ -1,10 +1,10 @@
 # /usr/bin/env python
 
-from etherwatch.ether_functions import EtherFunctions
-from etherwatch.messaging_functions import MessagingFunctions
-from etherwatch.db_functions import DatabaseFunctions
+from ether_functions import EtherFunctions
+from messaging_functions import MessagingFunctions
+from db_functions import DatabaseFunctions
 
-from etherwatch.config.positions import POSITIONS
+from config.positions import POSITIONS
 
 def get_eth_price():
     return EtherFunctions.get_eth_exchange_usd()

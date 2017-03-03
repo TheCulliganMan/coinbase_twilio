@@ -6,9 +6,9 @@ import json
 import requests
 from slackclient import SlackClient
 
-from etherwatch.config.api_keys import TWILIO_KEYS
-from etherwatch.config.api_keys import SLACK_KEYS
-from etherwatch.config.positions import POSITIONS
+from config.api_keys import TWILIO_KEYS
+from config.api_keys import SLACK_KEYS
+from config.positions import POSITIONS
 
 
 locale.setlocale( locale.LC_ALL, '' )

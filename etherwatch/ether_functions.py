@@ -7,8 +7,8 @@ import datetime
 from coinbase.wallet.client import Client as CoinbaseClient
 
 # project
-from etherwatch.config.api_keys import COINBASE_KEYS
-from etherwatch.config.positions import POSITIONS
+from config.api_keys import COINBASE_KEYS
+from config.positions import POSITIONS
 
 
 class EtherFunctions:
