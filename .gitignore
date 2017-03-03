@@ -51,5 +51,5 @@ docs/_build/
 
 # Project Specific
 *.db
-etherwatch/config/positions.py
-etherwatch/config/api_keys.py
+etherwatch/positions.py
+etherwatch/api_keys.py
