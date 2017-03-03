@@ -2,9 +2,9 @@
 import time
 import locale
 
-from ether_watch.config.api_keys import TWILIO_KEYS
-from ether_watch.config.api_keys import SLACK_KEYS
-from ether_watch.config.positions import POSITIONS
+from etherwatch.config.api_keys import TWILIO_KEYS
+from etherwatch.config.api_keys import SLACK_KEYS
+from etherwatch.config.positions import POSITIONS
 from slackclient import SlackClient
 
 locale.setlocale( locale.LC_ALL, '' )

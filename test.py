@@ -1,2 +1,2 @@
-import .ether_watch
-print(ether_watch.main())
+import .etherwatch
+print(etherwatch.main())
