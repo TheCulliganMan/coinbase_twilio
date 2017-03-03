@@ -4,7 +4,7 @@ from etherwatch.ether_functions import EtherFunctions
 from etherwatch.messaging_functions import MessagingFunctions
 from etherwatch.db_functions import DatabaseFunctions
 
-from etherwatch.config.positions import POSITIONS
+from etherwatch.positions import POSITIONS
 
 def get_eth_price():
     return EtherFunctions.get_eth_exchange_usd()
