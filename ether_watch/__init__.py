@@ -1,7 +1,7 @@
 # /usr/bin/env python
 
 from ether_watch.ether_functions import EtherFunctions
-from ether_watch.messaging import MessagingFunctions
+from ether_watch.messaging_functions import MessagingFunctions
 from ether_watch.db_functions import DatabaseFunctions
 
 from ether_watch.config.positions import POSITIONS
